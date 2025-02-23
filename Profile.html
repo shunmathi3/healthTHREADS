@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Profile</h1>
+  <form id="profile-form">
+   
+    <div id="doctor-fields" style="display: none;">
+      <label for="yearsExperience">Years of Experience:</label>
+      <input type="number" id="yearsExperience">
+      <label for="workplace">Workplace:</label>
+      <input type="text" id="workplace">
+      <label for="certifications">Certifications:</label>
+      <textarea id="certifications"></textarea>
+    </div>
+
+
+   
+    <div id="patient-fields" style="display: none;">
+      <label for="age">Age:</label>
+      <input type="number" id="age">
+      <label for="gender">Gender:</label>
+      <input type="text" id="gender">
+      <label for="medicalHistory">Medical History:</label>
+      <textarea id="medicalHistory"></textarea>
+      <label for="weight">Weight (kg):</label>
+      <input type="number" id="weight">
+    </div>
+
+
+    <button type="submit">Save Profile</button>
+  </form>
+
+
+ 
+  <div id="profile-display">
+    <h2>Profile Details</h2>
+    <div id="profile-details"></div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
