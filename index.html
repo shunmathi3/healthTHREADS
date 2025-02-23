@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthTHREADS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>HealthTHREADS</h1>
+    <nav>
+      <button onclick="showTab('emergency')">24/7 Doctor Chat</button>
+      <button onclick="showTab('doctorChat')">Doctor-to-Doctor Chat</button>
+      <button onclick="showTab('community')">Community Posts</button>
+      <button onclick="showTab('newPost')">Add New Post</button>
+      <button onclick="showTab('profile')">Profile</button>
+    </nav>
+  </header>
+
+
+  <main>
+   
+    <div id="emergency" class="tab-content">
+      <h2>24/7 Doctor Chat</h2>
+      <p>This is an emergency chat for immediate assistance.</p>
+      <button onclick="clearChat('emergencyChatMessages')">Clear Chat</button>
+      <div id="emergency-chat">
+      </div>
+      <form id="emergency-chat-form">
+        <input type="text" id="emergency-message" placeholder="Type your message..." required>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+
+    <div id="doctorChat" class="tab-content" style="display: none;">
+      <h2>Doctor-to-Doctor Chat</h2>
+      <p>Designated space for peer-to-peer medical consultations.</p>
+      <button onclick="clearChat('doctorChatMessages')">Clear Chat</button>
+      <div id="doctor-chat">
+      </div>
+      <form id="doctor-chat-form">
+        <input type="text" id="doctor-message" placeholder="Type your message..." required>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+
+    <div id="community" class="tab-content" style="display: none;">
+      <h2>Community Posts</h2>
+      <button onclick="clearAllPosts()">Clear All Posts</button>
+      <div id="posts-list">
+      </div>
+    </div>
+
+
+    <div id="newPost" class="tab-content" style="display: none;">
+      <h2>Add New Post</h2>
+      <form id="new-post-form">
+        <label for="title">Title:</label>
+        <input type="text" id="title" required>
+        <label for="content">Content:</label>
+        <textarea id="content" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+
+    <div id="profile" class="tab-content" style="display: none;">
+      <h2>Profile</h2>
+      <p>Welcome, <span id="username"></span>!</p>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </main>
+
+
+  <div id="profile-modal" style="display: none;">
+    <div id="modal-content">
+      <span id="close-modal" style="cursor: pointer; float: right;">&times;</span>
+      <div id="modal-profile-details"></div>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
